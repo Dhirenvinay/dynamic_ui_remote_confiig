@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "863339285393",
+    "project_id": "dynamic-ui-task",
+    "storage_bucket": "dynamic-ui-task.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863339285393:android:6b714fde42ea6064242830",
+        "android_client_info": {
+          "package_name": "com.dynamicui.task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlHG5ybRv0IEMLGpWlhpOpXV6Rjl_v5Sc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
