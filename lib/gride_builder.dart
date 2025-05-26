@@ -6,30 +6,44 @@ class GrideBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: GridView.count(
-        crossAxisCount: AppConfig.grideViewCrossAxis,
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        mainAxisSpacing: 10,
-        crossAxisSpacing: 10,
-        children: [
-          _buildCategoryItem(
-            context,
-            "Living Room",
-            Icons.weekend,
-            "PRICE DROP",
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(
+            "BUY FURNITURE",
+            style: Theme.of(context).textTheme.headlineLarge,
           ),
-          _buildCategoryItem(context, "Bedroom", Icons.bed, "PRICE DROP"),
-          _buildCategoryItem(context, "Storage", Icons.storage, ""),
-          _buildCategoryItem(context, "Study", Icons.book, "NEW"),
-          _buildCategoryItem(context, "Dining", Icons.dining, ""),
-          _buildCategoryItem(context, "Tables", Icons.table_bar, "NEW"),
-          _buildCategoryItem(context, "Chairs", Icons.chair, ""),
-          _buildCategoryItem(context, "Z Rated", Icons.star_border, ""),
-        ],
-      ),
+        ),
+
+        const SizedBox(height: 10),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: GridView.count(
+            crossAxisCount: AppConfig.grideViewCrossAxis,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
+            children: [
+              _buildCategoryItem(
+                context,
+                "Living Room",
+                Icons.weekend,
+                "PRICE DROP",
+              ),
+              _buildCategoryItem(context, "Bedroom", Icons.bed, "PRICE DROP"),
+              _buildCategoryItem(context, "Storage", Icons.storage, ""),
+              _buildCategoryItem(context, "Study", Icons.book, "NEW"),
+              _buildCategoryItem(context, "Dining", Icons.dining, ""),
+              _buildCategoryItem(context, "Tables", Icons.table_bar, "NEW"),
+              _buildCategoryItem(context, "Chairs", Icons.chair, ""),
+              _buildCategoryItem(context, "Z Rated", Icons.star_border, ""),
+            ],
+          ),
+        ),
+      ],
     );
   }
 
@@ -65,7 +79,7 @@ class GrideBuilder extends StatelessWidget {
                   ),
                   child: Text(
                     badge,
-                    style: const TextStyle(fontSize: 10, color: Colors.black),
+                    style: const TextStyle(fontSize: 6, color: Colors.black),
                   ),
                 ),
               ),
