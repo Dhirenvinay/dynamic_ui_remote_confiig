@@ -5,14 +5,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 12); // Extra height for margin
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 12);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      // Optional: ensures no overlap with system UI
       child: Container(
-        margin: const EdgeInsets.all(12), // Margin from all sides
+        margin: const EdgeInsets.all(12),
         padding: EdgeInsets.symmetric(vertical: 4, horizontal: 10),
         decoration: BoxDecoration(
           color: AppConfig.appBarBg,
@@ -23,7 +22,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               offset: Offset(0, 2),
             ),
           ],
-          borderRadius: BorderRadius.circular(12), // Optional: rounded corners
+          borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
           children: [

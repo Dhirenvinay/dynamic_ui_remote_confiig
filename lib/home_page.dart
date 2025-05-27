@@ -56,7 +56,7 @@ class GetWidgetByName extends StatelessWidget {
     if (widgetMap.containsKey(widgetName)) {
       return widgetMap[widgetName]!();
     } else {
-      log("the nname $widgetName and ${widgetMap}");
+      log("the nname $widgetName and $widgetMap");
       return Text('Widget "$widgetName" not found');
     }
   }
