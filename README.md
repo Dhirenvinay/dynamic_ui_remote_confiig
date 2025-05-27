@@ -2,7 +2,7 @@
 
 This Flutter project demonstrates how to create a **dynamic UI** where the **order**, **color**, and **size** of widgets can be changed remotely using **Firebase Remote Config**.
 
-> ✅ Built with **Flutter 3.29**
+> ✅ Built with **Flutter 3.29.3**
 
 ---
 
