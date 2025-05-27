@@ -3,7 +3,7 @@ import 'package:dynamiui/app_config.dart';
 import 'package:flutter/material.dart';
 
 class SliderWidget extends StatelessWidget {
-  SliderWidget({super.key});
+  const SliderWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
