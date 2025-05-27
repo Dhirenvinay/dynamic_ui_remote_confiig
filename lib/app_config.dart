@@ -19,6 +19,13 @@ class AppConfig {
   static Color viewAllColor = Colors.blue;
   static String HomeWidgets =
       "siderWidget,grideView,buyCard,offerWidget,dealWidget";
+  static String bedRoom = "PRICE DROP";
+  static String storage = "";
+  static String study = "";
+  static String dining = "NEW";
+  static String tables = "";
+  static String chairs = "";
+  static String zRated = "";
   // Sliders Configs
   static double siderAspectRatio = 16 / 9;
   static String sliderImages =
@@ -119,6 +126,47 @@ class AppConfig {
         remoteConfig.getDouble("offerBr") < 1
             ? 20
             : remoteConfig.getDouble("offerBr");
+
+    appbarText =
+        remoteConfig.getString("appbarText").isEmpty
+            ? "Empty Dynamic UI"
+            : remoteConfig.getString("appbarText");
+    // Gride badge
+
+    bedRoom =
+        remoteConfig.getString("bedRoom").isEmpty
+            ? "PRICE DROP"
+            : remoteConfig.getString("bedRoom");
+
+    storage =
+        remoteConfig.getString("storage").isEmpty
+            ? "PRICE DROP"
+            : remoteConfig.getString("storage");
+
+    study =
+        remoteConfig.getString("study").isEmpty
+            ? "PRICE DROP"
+            : remoteConfig.getString("study");
+
+    dining =
+        remoteConfig.getString("dining").isEmpty
+            ? "PRICE DROP"
+            : remoteConfig.getString("dining");
+
+    tables =
+        remoteConfig.getString("tables").isEmpty
+            ? "PRICE DROP"
+            : remoteConfig.getString("tables");
+
+    chairs =
+        remoteConfig.getString("chairs").isEmpty
+            ? "PRICE DROP"
+            : remoteConfig.getString("chairs");
+
+    zRated =
+        remoteConfig.getString("zRated").isEmpty
+            ? "PRICE DROP"
+            : remoteConfig.getString("zRated");
 
     log(
       "Fetched grideViewCrossAxis: $grideViewCrossAxis ${remoteConfig.getDouble("buySecondaryCardBr")}",
