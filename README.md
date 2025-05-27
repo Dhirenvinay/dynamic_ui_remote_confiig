@@ -1,48 +1,53 @@
-# Dynamic UI with Firebase Remote Config in Flutter
+# 🧩 Dynamic UI with Firebase Remote Config in Flutter
 
 This Flutter project demonstrates how to create a **dynamic UI** where the **order**, **color**, and **size** of widgets can be changed remotely using **Firebase Remote Config**.
+
+> ✅ Built with **Flutter 3.29**
+
+---
 
 ## ✨ Features
 
 - 🔄 Dynamically change the **order** of widgets (e.g., cards, buttons).
-- 🎨 Update **colors** of widgets from Remote Config without releasing new app versions.
-- 📏 Modify **size** (width, height, padding, font size) of UI elements on the fly.
-- 🛠 Powered by **Firebase Remote Config** to provide live updates.
+- 🎨 Update **colors** of widgets from Remote Config without releasing a new version.
+- 📏 Modify **size** (width, height, padding, font size) of UI elements live.
+- ⚙️ Powered by **Firebase Remote Config** for real-time updates.
+
+---
+
+## 🔧 Configurable UI Parameters
+
+These Remote Config parameters are dynamically fetched and used:
+
+| Parameter              | Purpose                                        | Example Value                                                   |
+|------------------------|------------------------------------------------|------------------------------------------------------------------|
+| `HomeWidgets`          | Controls the order of widgets                  | `siderWidget,gridView,buyCard,offerWidget,dealWidget`           |
+| `banner_color`         | Sets banner background color                   | `#bb9457`                                                       |
+| `primary_color`        | App's primary theme color                      | `#FFC0CB`                                                       |
+| `heading_font_size`    | Heading text font size                         | `20`                                                            |
+| `gridViewCrossAxis`    | Number of columns in grid view                 | `4`                                                             |
+| `sliderImages`         | URL for remote banner image                    | Image URL from Pexels                                           |
+| `appbarText`           | Text displayed in the AppBar                   | `Check double dekhle`                                           |
+| `bedRoom`, `dining`, `chairs`, `storage` | Category labels                 | `NEW`, `PRICE DROP`                                             |
+
+---
 
 ## 📸 Screenshots
 
-Below are example screenshots demonstrating dynamic changes based on Remote Config values.
+These screenshots show how the UI adapts based on the Remote Config values.
 
-### 🔷 Example 1: Default Layout
-![Default Layout](screenshot/Screenshot_1748328034.png)
-
-### 🔶 Example 2: Reordered and Resized Widgets
-![Reordered and Resized](screenshots/Screenshot_1748328043.png)
+| Default Layout | Reordered Widgets |
+|----------------|------------------|
+| <img src="screenshot/Screenshot_1748328034.png" alt="Default Layout" width="300" height="600" /> | <img src="screenshot/Screenshot_1748328043.png" alt="Reordered Widgets" width="300" height="600" /> |
 
 ### 🟢 Example 3: Custom Colors Applied
-![Custom Colors](screenshot/firebase.jpeg)
+<img src="screenshot/firebase.jpeg" alt="Custom Colors" />
 
-## 🧠 How it Works
+---
 
-1. Firebase Remote Config parameters control:
-   - `widget_order`: A list of widget IDs to determine the order of rendering.
-   - `widget_colors`: A map of widget IDs to their color hex values.
-   - `widget_sizes`: A map of widget IDs to size parameters (e.g., height, width, font size).
+## 📦 Setup Instructions
 
-2. The app fetches Remote Config and updates the UI accordingly:
-   - On startup and optionally on pull-to-refresh.
-   - Uses `setState()` or reactive state management to rebuild with new config.
-
-3. Example Firebase Remote Config JSON:
-```json
-{
-  "widget_order": ["header", "image", "button"],
-  "widget_colors": {
-    "header": "#FF5733",
-    "button": "#33FF57"
-  },
-  "widget_sizes": {
-    "header": {"fontSize": 24},
-    "button": {"width": 200, "height": 50}
-  }
-}
+### 1. Clone the Project
+```bash
+git clone https://github.com/your-username/flutter-dynamic-ui-remote-config.git
+cd flutter-dynamic-ui-remote-config
