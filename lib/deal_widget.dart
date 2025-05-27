@@ -15,8 +15,8 @@ class DealWidget extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  const Icon(Icons.discount, color: Colors.purple),
-                  const SizedBox(width: 5),
+                  // const Icon(Icons.discount, color: Colors.purple),
+                  // const SizedBox(width: 5),
                   Text(
                     "Deals of the day",
                     style: Theme.of(context).textTheme.headlineLarge,

@@ -19,8 +19,13 @@ class AppConfig {
   static Color viewAllColor = Colors.blue;
   static String HomeWidgets =
       "siderWidget,grideView,buyCard,offerWidget,dealWidget";
+  // Sliders Configs
+  static double siderAspectRatio = 16 / 9;
   static String sliderImages =
       "https://images.pexels.com/photos/139309/pexels-photo-139309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2,https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2,https://images.pexels.com/photos/1137511/pexels-photo-1137511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+
+  // Offer  Widget
+  static double offerBr = 20;
 
   static Color appBarBg = Color(0xFFF5F5F5);
 
@@ -100,10 +105,20 @@ class AppConfig {
         remoteConfig.getString("HomeWidgets").isEmpty
             ? "siderWidget,grideView,buyCard,offerWidget,dealWidget"
             : remoteConfig.getString("HomeWidgets");
+    // Slider Remote
     sliderImages =
         remoteConfig.getString("sliderImages").isEmpty
             ? "https://images.pexels.com/photos/139309/pexels-photo-139309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2,https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2,https://images.pexels.com/photos/1137511/pexels-photo-1137511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             : remoteConfig.getString("sliderImages");
+
+    siderAspectRatio =
+        remoteConfig.getDouble("siderAspectRatio") == 0
+            ? 16 / 9
+            : remoteConfig.getDouble("siderAspectRatio");
+    offerBr =
+        remoteConfig.getDouble("offerBr") < 1
+            ? 20
+            : remoteConfig.getDouble("offerBr");
 
     log(
       "Fetched grideViewCrossAxis: $grideViewCrossAxis ${remoteConfig.getDouble("buySecondaryCardBr")}",

@@ -35,6 +35,10 @@ class OfferWiidget extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 10.0),
                   child: Card(
                     color: const Color(0xFFE3F2FD),
+                    shape: ContinuousRectangleBorder(
+                      borderRadius: BorderRadius.circular(AppConfig.offerBr),
+                    ),
+
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Row(

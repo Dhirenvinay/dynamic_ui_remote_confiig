@@ -19,7 +19,7 @@ class SliderWidget extends StatelessWidget {
           autoPlay: true,
           autoPlayInterval: const Duration(seconds: 3),
           enlargeCenterPage: true,
-          aspectRatio: 16 / 9,
+          aspectRatio: AppConfig.siderAspectRatio,
           viewportFraction: 0.8,
         ),
         items:
